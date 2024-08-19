@@ -36,3 +36,23 @@
 .ankit-grid-product:hover .read-more a {
     background-color: white;
 }
+
+.ankit-home-about-img {
+    position: relative;
+    border-radius: 2rem;
+    z-index: -9999;
+    top: -5rem;
+}
+
+.ankit-home-about-exptxt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12rem;
+    position: relative;
+    background-color: #ffffff99;
+    backdrop-filter: blur(4px);
+    border-radius: 4rem;
+    left: -2rem;
+    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
+}
