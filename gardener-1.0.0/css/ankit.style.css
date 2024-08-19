@@ -1,0 +1,6 @@
+.ankit-hero-img {
+    max-height: 700px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
