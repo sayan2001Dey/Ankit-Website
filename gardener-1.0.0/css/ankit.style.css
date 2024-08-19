@@ -68,3 +68,15 @@
 .ankit-about-ul li::marker{
     color: green;
 }
+
+.navbar {
+    z-index: 99999;
+}
+
+.ankit-products-img {
+    object-fit: contain;
+    object-position: center;
+    max-height: 500px;
+    max-width: 60dvw;
+    margin: 2rem;
+}
