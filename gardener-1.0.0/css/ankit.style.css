@@ -56,3 +56,15 @@
     left: -2rem;
     box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
 }
+
+.ankit-about-img {
+    border-radius: 2rem;
+    object-fit: contain;
+    object-position: center;
+    min-width: min(500px, 100%);
+    max-width: 500px;
+}
+
+.ankit-about-ul li::marker{
+    color: green;
+}
