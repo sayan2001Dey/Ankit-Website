@@ -1,239 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Gardener - Gardening Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      ></div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark text-light px-0 py-2">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center me-4">
-                    <span class="fa fa-phone-alt me-2"></span>
-                    <span>033 2287-4360</span>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <span class="far fa-envelope me-2"></span>
-                    <span>ankit_flour@yahoo.com</span>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center mx-n2">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <span class="fa fa-phone-alt me-2"></span>
+            <span>033 2287-4360</span>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center">
+            <span class="far fa-envelope me-2"></span>
+            <span>ankit_flour@yahoo.com</span>
+          </div>
         </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center mx-n2">
+            <span>Follow Us:</span>
+            <a class="btn btn-link text-light" href=""
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a class="btn btn-link text-light" href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a class="btn btn-link text-light" href=""
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-link text-light" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-		<a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-           <a href="index.html"><img src="img/logo1.png" alt="Ankit India Ltd." ></a>
-        </a>
-        <button type="button" class="navbar-toggler border-0 me-4"
-            data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="products.html" class="nav-item nav-link">Our Products</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Investors</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="investor1.html" class="dropdown-item">Features</a>
-                        <a href="investor2.html" class="dropdown-item">Free Quote</a>
-                        <a href="investor3.html" class="dropdown-item">Our Team</a>
-                        <a href="investor4.html" class="dropdown-item">Testimonial</a>
-                        <!-- <a href="404.html" class="dropdown-item">404 Page</a> -->
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link active">Contact us</a>
+      <a
+        href="index.html"
+        class="navbar-brand d-flex align-items-center px-4 px-lg-5"
+      >
+        <a href="index.html"
+          ><img src="img/logo1.png" alt="Ankit India Ltd."
+        /></a>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler border-0 me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+          <a href="products.html" class="nav-item nav-link">Our Products</a>
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Investors</a
+            >
+            <div class="dropdown-menu bg-light m-0">
+              <a href="investor1.html" class="dropdown-item">Features</a>
+              <a href="investor2.html" class="dropdown-item">Free Quote</a>
+              <a href="investor3.html" class="dropdown-item">Our Team</a>
+              <a href="investor4.html" class="dropdown-item">Testimonial</a>
+              <!-- <a href="404.html" class="dropdown-item">404 Page</a> -->
             </div>
+          </div>
+          <a href="contact.html" class="nav-item nav-link active">Contact us</a>
         </div>
+      </div>
     </nav>
     <!-- Navbar End -->
 
-
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-3 text-white mb-4 animated slideInDown">Contact Us</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="about.html">About</a></li>
-                    <li class="breadcrumb-item"><a href="products.html">Our Products</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
-                </ol>
-            </nav>
-        </div>
+    <div
+      class="container-fluid page-header py-5 mb-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center py-5">
+        <h1 class="display-3 text-white mb-4 animated slideInDown">
+          Contact Us
+        </h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="about.html">About</a></li>
+            <li class="breadcrumb-item">
+              <a href="products.html">Our Products</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Contact Us
+            </li>
+          </ol>
+        </nav>
+      </div>
     </div>
     <!-- Page Header End -->
 
-
     <!-- Contact Start -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <p class="fs-5 fw-bold text-primary">Contact Us</p>
-                    <h1 class="display-5 mb-5">If You Have Any Query, Please Contact Us</h1>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form id="contact-form">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary py-3 px-4" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+            <p class="fs-5 fw-bold text-primary">Contact Us</p>
+            <h1 class="display-5 mb-5">
+              If You Have Any Query, Please Contact Us
+            </h1>
+            <p class="mb-4">
+              The contact form is currently inactive. Get a functional and
+              working contact form with Ajax & PHP in a few minutes. Just copy
+              and paste the files, add a little code and you're done.
+              <a href="https://htmlcodex.com/contact-form">Download Now</a>.
+            </p>
+            <form id="contact-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      placeholder="Your Name"
+                    />
+                    <label for="name">Your Name</label>
+                  </div>
                 </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
-                    <div class="position-relative rounded overflow-hidden h-100">
-                        <iframe class="position-relative w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.019427765029!2d88.34963727615771!3d22.540944979514332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027710ab644fa5%3A0xb7be5f961b45dc72!2sAnkit%20India%20Limited!5e0!3m2!1sen!2sin!4v1724137125722!5m2!1sen!2sin"
-                        frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                    </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Your Email"
+                    />
+                    <label for="email">Your Email</label>
+                  </div>
                 </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      placeholder="Subject"
+                    />
+                    <label for="subject">Subject</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      placeholder="Leave a message here"
+                      name="message"
+                      style="height: 100px"
+                    ></textarea>
+                    <label for="message">Message</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary py-3 px-4" type="submit">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            class="col-lg-6 wow fadeIn"
+            data-wow-delay="0.5s"
+            style="min-height: 450px"
+          >
+            <div class="position-relative rounded overflow-hidden h-100">
+              <iframe
+                class="position-relative w-100 h-100"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.019427765029!2d88.34963727615771!3d22.540944979514332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027710ab644fa5%3A0xb7be5f961b45dc72!2sAnkit%20India%20Limited!5e0!3m2!1sen!2sin!4v1724137125722!5m2!1sen!2sin"
+                frameborder="0"
+                style="min-height: 450px; border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Contact End -->
 
-
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>5th floor, FMC FORTUNA 234/3A, 14A, Acharya Jagdish Chandra Bose Rd, Kolkata, West Bengal 700020</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>033 2287-4360</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>ankit_flour@yahoo.com</p>
-                    <p class="mb-2"><i class="fa fa-fax me-3" aria-hidden="true"></i>+91 (33) 2281-0629</p>
-                    
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Products</h4>
-                    <a class="btn btn-link" href="">Atta</a>
-                    <a class="btn btn-link" href="">Sattu</a>
-                    <a class="btn btn-link" href="">Besan</a>
-                    <a class="btn btn-link" href="">Dalda</a>
-                    <a class="btn btn-link" href="">Maida</a>
-                    <a class="btn btn-link" href="">Sooji</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="index.html">Home</a>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="products.html">Our Products</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Social Media</h4>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                </div>
+    <div
+      class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-4">Our Office</h4>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>5th floor, FMC FORTUNA
+              234/3A, 14A, Acharya Jagdish Chandra Bose Rd, Kolkata, West Bengal
+              700020
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>033 2287-4360
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>ankit_flour@yahoo.com
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-fax me-3" aria-hidden="true"></i>+91 (33)
+              2281-0629
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-4">Products</h4>
+            <a class="btn btn-link" href="">Atta</a>
+            <a class="btn btn-link" href="">Sattu</a>
+            <a class="btn btn-link" href="">Besan</a>
+            <a class="btn btn-link" href="">Dalda</a>
+            <a class="btn btn-link" href="">Maida</a>
+            <a class="btn btn-link" href="">Sooji</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="index.html">Home</a>
+            <a class="btn btn-link" href="about.html">About Us</a>
+            <a class="btn btn-link" href="products.html">Our Products</a>
+            <a class="btn btn-link" href="contact.html">Contact Us</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">Support</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-4">Social Media</h4>
+            <div class="d-flex pt-2">
+              <a
+                class="btn btn-square btn-outline-light rounded-circle me-2"
+                href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-light rounded-circle me-2"
+                href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-light rounded-circle me-2"
+                href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-light rounded-circle me-2"
+                href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Copyright Start -->
     <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All
+            Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Designed By
+            <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+            Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Copyright End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -251,38 +363,57 @@
     <script src="js/main.js"></script>
 
     <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyCaBILrGBa8sLEMGDnCA1Fhlohn8wk6t4M",
-          authDomain: "yolo-39b5d.firebaseapp.com",
-          projectId: "yolo-39b5d",
-          storageBucket: "yolo-39b5d.appspot.com",
-          messagingSenderId: "892770214322",
-          appId: "1:892770214322:web:dc8fffcb5fcbd25120c4ab",
-          measurementId: "G-090EKXRPYS"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+      import {
+        getFunctions,
+        httpsCallable,
+      } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-functions.js";
+      // Import the functions you need from the SDKs you need
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
 
-        // fns
-        const form = document.querySelector('#contact-form');
-        form.addEventListener('submit', (event) => {
-          event.preventDefault();
-          const formData = new FormData(form);
-          const data = Object.fromEntries(formData);
-          console.log(data);
-        });
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCaBILrGBa8sLEMGDnCA1Fhlohn8wk6t4M",
+        authDomain: "yolo-39b5d.firebaseapp.com",
+        projectId: "yolo-39b5d",
+        storageBucket: "yolo-39b5d.appspot.com",
+        messagingSenderId: "892770214322",
+        appId: "1:892770214322:web:dc8fffcb5fcbd25120c4ab",
+        measurementId: "G-090EKXRPYS",
+      };
 
-      </script>
-</body>
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
 
+      // Initialize Firebase Functions
+      const functions = getFunctions(app);
+
+      // Reference to the Cloud Function
+      const sendEmail = httpsCallable(functions, "submitContactRequest");
+
+      // fns
+      const form = document.querySelector("#contact-form");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        console.log(data);
+        sendEmail(data)
+          .then((res) => {
+            alert("Thank you for contacting us. We will get back to you soon.");
+            form.reset();
+            console.log(res);
+          })
+          .catch((err) => {
+            alert("Something went wrong. Please try again later.");
+            console.log(err);
+          });
+      });
+    </script>
+  </body>
 </html>

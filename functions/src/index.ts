@@ -87,62 +87,62 @@ function sendEmail(data: Request): void {
   return;
 }
 
-exports.submitCallbackRequest = onCall<Request>(
+exports.submitContactRequest = onCall<Request>(
   // {enforceAppCheck: true},
   (
     req: CallableRequest<Request>
   ) => {
-    try {
-      const data = req.data;
+    // try {
+    //   const data = req.data;
 
-      // Validate each field
-      if (!validateName(data.name)) {
-        throw new HttpsError(
-          "invalid-argument",
-          "Invalid name format. Please provide a first and last name."
-        );
-      }
+    //   // Validate each field
+    //   if (!validateName(data.name)) {
+    //     throw new HttpsError(
+    //       "invalid-argument",
+    //       "Invalid name format. Please provide a first and last name."
+    //     );
+    //   }
 
-      if (!validatePhone(data.phone)) {
-        throw new HttpsError(
-          "invalid-argument",
-          "Invalid phone number format. Please enter a valid phone number."
-        );
-      }
+    //   if (!validatePhone(data.phone)) {
+    //     throw new HttpsError(
+    //       "invalid-argument",
+    //       "Invalid phone number format. Please enter a valid phone number."
+    //     );
+    //   }
 
-      if (!validateLocation(data.location)) {
-        throw new HttpsError(
-          "invalid-argument",
-          "Invalid location format. Please provide a valid location."
-        );
-      }
+    //   if (!validateLocation(data.location)) {
+    //     throw new HttpsError(
+    //       "invalid-argument",
+    //       "Invalid location format. Please provide a valid location."
+    //     );
+    //   }
 
-      if (!validateQuery(data.query)) {
-        throw new HttpsError(
-          "invalid-argument",
-          "Query cannot be empty. Please provide a question or message."
-        );
-      }
+    //   if (!validateQuery(data.query)) {
+    //     throw new HttpsError(
+    //       "invalid-argument",
+    //       "Query cannot be empty. Please provide a question or message."
+    //     );
+    //   }
 
-      logger.info(
-      // eslint-disable-next-line max-len
-        `Callback request received: name: ${data.name}, phone: ${data.phone}, location: ${data.location}, query: ${data.query}`
-      );
+    //   logger.info(
+    //   // eslint-disable-next-line max-len
+    //     `Callback request received: name: ${data.name}, phone: ${data.phone}, location: ${data.location}, query: ${data.query}`
+    //   );
 
-      sendEmail(data);
+    //   sendEmail(data);
 
-      logger.info(
-      // eslint-disable-next-line max-len
-        `Callback request processed: name: ${data.name}, phone: ${data.phone}, location: ${data.location}, query: ${data.query}`
-      );
+    //   logger.info(
+    //   // eslint-disable-next-line max-len
+    //     `Callback request processed: name: ${data.name}, phone: ${data.phone}, location: ${data.location}, query: ${data.query}`
+    //   );
 
-      return {message: "Request submitted successfully!"};
+    //   return {message: "Request submitted successfully!"};
 
-    } catch (error) {
-      logger.error("Error processing Callback request:", error);
-      throw new HttpsError(
-        "internal",
-        "An error occurred. Please try again later."
-      );
-    }
+    // } catch (error) {
+    //   logger.error("Error processing Callback request:", error);
+    //   throw new HttpsError(
+    //     "internal",
+    //     "An error occurred. Please try again later."
+    //   );
+    // }
   });
