@@ -400,6 +400,23 @@
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
         console.log(data);
+        if(data.name.length < 3) {
+          alert("Please enter a valid name.");
+          return;
+        }
+        if(data.email.length < 5 || !data.email.includes('@') || !data.email.includes('.')) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+        if(data.subject.length < 2) {
+          alert("Please enter a valid subject.");
+          return;
+        }
+        if(data.message.length < 10) {
+          alert("Please enter a valid message. Message must be at least 10 characters long.");
+          return;
+        }
+        // Send email
         sendEmail(data)
           .then((res) => {
             alert("Thank you for contacting us. We will get back to you soon.");
