@@ -1,4 +1,5 @@
 /* eslint-disable padded-blocks */
+/* eslint-disable max-len */
 
 // Dependencies for callable functions.
 import {
@@ -8,53 +9,58 @@ import {
 } from "firebase-functions/v2/https";
 import * as logger from "firebase-functions/logger";
 import * as nodeMailer from "nodemailer";
-
+// prettier-ignore
 import {Request} from "./request.interface";
-
+// prettier-ignore
 import {config} from "./config/config";
+// prettier-ignore
 import {getEmailTemplate} from "./emailTamplate";
 
 // Helper functions for validation
 
 /**
- * Name validation.
- * @param {string} name Name
- * @return {boolean} return true if the data is valid
+ * Validates a given name based on its length.
+ *
+ * @param {string} name - The name to be validated
+ * @return {boolean} True if the name is valid, False otherwise
  */
 function validateName(name: string): boolean {
   if (name == null) return false;
-  return name.length>2 && name.length<31;
+  return name.length > 2 && name.length < 51;
 }
 
 /**
- * Phone number validation.
- * @param {string} phone 10 digit Phone Number
- * @return {boolean} return true if the data is valid
-*/
-function validatePhone(phone: string): boolean {
-  if (phone == null) return false;
-  const phoneRegex = /^[0-9]{10}$/;
-  return phoneRegex.test(phone);
-}
-
-/**
- * Location validation.
- * @param {string} location Location details
- * @return {boolean} return true if the data is valid
+ * Validates an email address.
+ *
+ * @param {string} email - the email address to be validated
+ * @return {boolean} true if the email is valid, false otherwise
  */
-function validateLocation(location: string): boolean {
-  if (location == null) return false;
-  return location.length>5 && location.length<71;
+function validateEmail(email: string): boolean {
+  if (email == null) return false;
+  const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  return email.length > 5 && email.length < 256 && emailRegex.test(email);
 }
 
 /**
- * Query validation.
- * @param {string} query Query details
- * @return {boolean} return true if the data is valid
+ * Validates the subject of an email.
+ *
+ * @param {string} subject - The subject to be validated.
+ * @return {boolean} Returns true if the subject is valid, otherwise returns false.
  */
-function validateQuery(query: string): boolean {
-  if (query == null) return false;
-  return query.length>19 && query.length<1001;
+function validateSubject(subject: string): boolean {
+  if (subject == null) return false;
+  return subject.length > 2 && subject.length < 51;
+}
+
+/**
+ * Validates if the given message is not null and has a length greater than 10.
+ *
+ * @param {string} message - The message to be validated.
+ * @return {boolean} Returns true if the message is not null and has a length greater than 10, otherwise returns false.
+ */
+function validateMessage(message: string): boolean {
+  if (message == null) return false;
+  return message.length > 10 && message.length < 5000;
 }
 
 /**
@@ -63,16 +69,16 @@ function validateQuery(query: string): boolean {
  * @return {void} return true if the data is valid
  */
 function sendEmail(data: Request): void {
-
   const transporter = nodeMailer.createTransport(config.smtpConfig);
 
   const msg = getEmailTemplate(data);
 
   const mailOptions = {
-    from: "\"Friendship Caterers Bot\" <"+config.smtpConfig.auth.user+">",
+    from: `"Ankit India Email Bot" <${config.smtpConfig.auth.user}>`,
     to: config.destinations,
-    // eslint-disable-next-line max-len
-    subject: "New Callback Request - Friendship Caterers Ref."+Date.now().toString(),
+
+    subject:
+      "New Contact Request - " + data.subject + " Ref." + Date.now().toString(),
     html: msg,
   };
 
@@ -89,60 +95,53 @@ function sendEmail(data: Request): void {
 
 exports.submitContactRequest = onCall<Request>(
   // {enforceAppCheck: true},
-  (
-    req: CallableRequest<Request>
-  ) => {
-    // try {
-    //   const data = req.data;
-
-    //   // Validate each field
-    //   if (!validateName(data.name)) {
-    //     throw new HttpsError(
-    //       "invalid-argument",
-    //       "Invalid name format. Please provide a first and last name."
-    //     );
-    //   }
-
-    //   if (!validatePhone(data.phone)) {
-    //     throw new HttpsError(
-    //       "invalid-argument",
-    //       "Invalid phone number format. Please enter a valid phone number."
-    //     );
-    //   }
-
-    //   if (!validateLocation(data.location)) {
-    //     throw new HttpsError(
-    //       "invalid-argument",
-    //       "Invalid location format. Please provide a valid location."
-    //     );
-    //   }
-
-    //   if (!validateQuery(data.query)) {
-    //     throw new HttpsError(
-    //       "invalid-argument",
-    //       "Query cannot be empty. Please provide a question or message."
-    //     );
-    //   }
-
-    //   logger.info(
-    //   // eslint-disable-next-line max-len
-    //     `Callback request received: name: ${data.name}, phone: ${data.phone}, location: ${data.location}, query: ${data.query}`
-    //   );
-
-    //   sendEmail(data);
-
-    //   logger.info(
-    //   // eslint-disable-next-line max-len
-    //     `Callback request processed: name: ${data.name}, phone: ${data.phone}, location: ${data.location}, query: ${data.query}`
-    //   );
-
-    //   return {message: "Request submitted successfully!"};
-
-    // } catch (error) {
-    //   logger.error("Error processing Callback request:", error);
-    //   throw new HttpsError(
-    //     "internal",
-    //     "An error occurred. Please try again later."
-    //   );
-    // }
-  });
+  (req: CallableRequest<Request>) => {
+    try {
+      const data = req.data;
+      // Validate each field
+      if (!validateName(data.name)) {
+        throw new HttpsError(
+          "invalid-argument",
+          "Invalid name format. Please provide a first and last name."
+        );
+      }
+      if (!validateEmail(data.email)) {
+        throw new HttpsError(
+          "invalid-argument",
+          "Invalid email format. Please enter a valid email."
+        );
+      }
+      if (!validateSubject(data.subject)) {
+        throw new HttpsError(
+          "invalid-argument",
+          "Invalid subject format. Please provide a valid subject."
+        );
+      }
+      if (!validateMessage(data.message)) {
+        throw new HttpsError(
+          "invalid-argument",
+          "Message cannot be empty. Please provide a question or message."
+        );
+      }
+      logger.info(
+        `Callback request received: name: ${data.name}, email: ${data.email},
+        subject: ${data.subject}, message: ${data.message}`
+      );
+      sendEmail(data);
+      logger.info(
+        `Callback request processed: name: ${data.name},
+        email: ${data.email}, subject: ${data.subject},
+        message: ${data.message}`
+      );
+      return {
+        message: "Request submitted successfully!",
+      };
+    } catch (error) {
+      logger.error("Error processing Callback request:", error);
+      throw new HttpsError(
+        "internal",
+        "An error occurred. Please try again later."
+      );
+    }
+  }
+);

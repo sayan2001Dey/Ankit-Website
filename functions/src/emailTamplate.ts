@@ -3,8 +3,7 @@
 import {Request} from "./request.interface";
 
 export const getEmailTemplate = (data: Request) :string => {
-  const {name, phone, location, query} = data;
-  const phoneWithGap = phone.slice(0, 5)+" "+phone.slice(5, 10);
+  const {name, email, subject, message} = data;
   const date = new Date(Date.now() + (5.5 * 60 * 60 * 1000)); // Offset for kolkata
 
   const days = [
@@ -96,7 +95,7 @@ export const getEmailTemplate = (data: Request) :string => {
                                 <span><b>Phone:</b> </span>
                               </td>
                               <td align="right">
-                                <span>+91 ${phoneWithGap}</span>
+                                <span>+91 ${email}</span>
                               </td>
                             </tr>
 
@@ -105,7 +104,7 @@ export const getEmailTemplate = (data: Request) :string => {
                                 <span><b>Location:</b> </span>
                               </td>
                               <td align="right">
-                                <span>${location}</span>
+                                <span>${subject}</span>
                               </td>
                             </tr>
 
@@ -128,28 +127,11 @@ export const getEmailTemplate = (data: Request) :string => {
                                   <tbody>
                                     <tr>
                                       <td>
-                                        <span>${query}</span>
+                                        <span>${message}</span>
                                       </td>
                                     </tr>
                                   </tbody>
                                 </table>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td colspan="2">
-                                <a href="tel:+91${phone}" style="text-decoration: none;">
-                                  <button class="cta-btn" style="background-color: #fdfbe8; border: 1px solid #ffe7ba; border-radius: 2rem; margin-top: 0.5rem; padding: 0 2rem; font-size: 16px; line-height: 42px;">
-                                    <img src="https://friendshipcaterers.in/assets/mail/call-alt.png" alt="Call icon" height="20px" align="center" style="margin-bottom: 6px">
-                                    <span>Call now</span>
-                                  </button>
-                                </a>
-                                <a href="https://wa.me/+91${phone}?text=Hi%20there%2C%0AThank%20you%20for%20contacting%20Friendship%20Caterers" style="text-decoration: none;">
-                                  <button class="cta-btn" style="background-color: #fdfbe8; border: 1px solid #ffe7ba; border-radius: 2rem; margin-top: 0.5rem; padding: 0 2rem; font-size: 16px; line-height: 42px;">
-                                    <img src="https://friendshipcaterers.in/assets/mail/whatsapp-alt.png" alt="WhatsApp icon" height="20px" align="center" style="margin-bottom: 3px">
-                                    <span>WhatsApp now</span>
-                                  </button>
-                                </a>
                               </td>
                             </tr>
 
@@ -172,13 +154,10 @@ export const getEmailTemplate = (data: Request) :string => {
 
                 <div class="inf" style="margin: 1rem 0; width: 100%; text-align: center; color: gray;">
                   <small>Powered by
-                    <img src="https://stelleronix.com/logo.png" alt="Stelleronix" height="20px" align="center" style="margin-bottom: 5px">
-                    <span style="color: orangered"> | </span>
-                    <img src="https://stelleronix.com/softworks.png" alt="Softworks" height="20px" align="center" style="margin-bottom: 5px">
-                    <span style="color: orangered">™</span>
+                    <img src="https://friendshipcaterers.in/assets/mail/logo.png" alt="Stelleronix" height="20px" align="center" style="margin-bottom: 5px">
                   </small>
                   <br>
-                  <small> © 2024 Stelleronix LLP </small>
+                  <small> © 2024 Stelleronix </small>
                 </div>
               </div>
             </td>
