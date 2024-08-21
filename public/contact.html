@@ -123,7 +123,7 @@
                     <p class="fs-5 fw-bold text-primary">Contact Us</p>
                     <h1 class="display-5 mb-5">If You Have Any Query, Please Contact Us</h1>
                     <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form>
+                    <form id="contact-form">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -249,6 +249,40 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCaBILrGBa8sLEMGDnCA1Fhlohn8wk6t4M",
+          authDomain: "yolo-39b5d.firebaseapp.com",
+          projectId: "yolo-39b5d",
+          storageBucket: "yolo-39b5d.appspot.com",
+          messagingSenderId: "892770214322",
+          appId: "1:892770214322:web:dc8fffcb5fcbd25120c4ab",
+          measurementId: "G-090EKXRPYS"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // fns
+        const form = document.querySelector('#contact-form');
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData);
+          console.log(data);
+        });
+
+      </script>
 </body>
 
 </html>
