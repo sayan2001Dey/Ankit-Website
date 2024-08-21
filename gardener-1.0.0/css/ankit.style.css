@@ -80,3 +80,7 @@
     max-width: 60dvw;
     margin: 2rem;
 }
+
+.ankit-products-desc {
+    text-align: justify;
+}
